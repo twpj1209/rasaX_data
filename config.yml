@@ -22,3 +22,4 @@ pipeline:
   retrieval_intent: chitchat
 policies:
 - name: RulePolicy
+
