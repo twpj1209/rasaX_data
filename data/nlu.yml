@@ -1,5 +1,4 @@
 version: "2.0"
-
 nlu:
 - intent: greet
   examples: |
@@ -16,7 +15,7 @@ nlu:
     - goodmorning
     - goodevening
     - good afternoon
-
+    - Hi
 - intent: goodbye
   examples: |
     - good afternoon
@@ -30,7 +29,6 @@ nlu:
     - see you around
     - bye bye
     - see you later
-
 - intent: affirm
   examples: |
     - yes
@@ -39,7 +37,7 @@ nlu:
     - of course
     - that sounds good
     - correct
-
+    - Yes
 - intent: deny
   examples: |
     - no
@@ -49,7 +47,6 @@ nlu:
     - don't like that
     - no way
     - not really
-
 - intent: mood_great
   examples: |
     - perfect
@@ -66,7 +63,6 @@ nlu:
     - so so perfect
     - so good
     - so perfect
-
 - intent: mood_unhappy
   examples: |
     - my day was horrible
@@ -83,263 +79,198 @@ nlu:
     - extremly sad
     - so saad
     - so sad
-
+    - I'm sad
 - intent: bot_challenge
   examples: |
     - are you a bot?
     - are you a human?
     - am I talking to a bot?
     - am I talking to a human?
-
 - intent: faq/1
-  examples: | 
-    -  What is the NYC Kids RISE Save for College Program?
-
+  examples: |
+    - What is the NYC Kids RISE Save for College Program?
+    - What is Save For College Program?
+    - What is NYCKidsRise?
 - intent: faq/2
-  examples: | 
-    -  How does the scholarship part of the Save for College Program work?
-
+  examples: |
+    - How does the scholarship part of the Save for College Program work?
 - intent: faq/3
-  examples: | 
-    -  How does the savings part of the Save for College Program work?
-
+  examples: |
+    - How does the savings part of the Save for College Program work?
 - intent: faq/4
-  examples: | 
-    -  Why was the NYC Kids RISE Save for College Program created?
-
+  examples: |
+    - Why was the NYC Kids RISE Save for College Program created?
 - intent: faq/5
-  examples: | 
-    -  How does immigration status affect my ability to participate?
-
+  examples: |
+    - How does immigration status affect my ability to participate?
 - intent: faq/6
-  examples: | 
-    -  What can the money in the NYC Scholarship Account be used for? Are there any restrictions on how it can be used?
-
+  examples: |
+    - What can the money in the NYC Scholarship Account be used for? Are there any restrictions on how it can be used?
 - intent: faq/7
-  examples: | 
-    -  What if a student in the Save for College Program doesn’t go to college?
-
+  examples: |
+    - What if a student in the Save for College Program doesn’t go to college?
 - intent: faq/8
-  examples: | 
-    -  Who manages the Save for College Program?
-
+  examples: |
+    - Who manages the Save for College Program?
 - intent: faq/9
-  examples: | 
-    -  Where can I find more information about the Save for College Program?
-
+  examples: |
+    - Where can I find more information about the Save for College Program?
 - intent: faq/10
-  examples: | 
-    -  Who is eligible to participate in the Save for College Program?
-
+  examples: |
+    - Who is eligible to participate in the Save for College Program?
 - intent: faq/11
-  examples: | 
-    -  Which schools are participating?
-
+  examples: |
+    - Which schools are participating?
 - intent: faq/12
-  examples: | 
-    -  How do I participate?
-
+  examples: |
+    - How do I participate?
 - intent: faq/13
-  examples: | 
-    -  What if I don’t want to participate?
-
+  examples: |
+    - What if I don’t want to participate?
 - intent: faq/14
-  examples: | 
-    -  What happens if I do not opt out of the Save for College Program?
-
+  examples: |
+    - What happens if I do not opt out of the Save for College Program?
 - intent: faq/15
-  examples: | 
-    -  How was my child enrolled in the Save for College Program?
-
+  examples: |
+    - How was my child enrolled in the Save for College Program?
 - intent: faq/16
-  examples: | 
-    -  My child has been enrolled What do I do next?
-
+  examples: |
+    - My child has been enrolled What do I do next?
 - intent: faq/17
-  examples: | 
-    -  How much should I be saving for college on top of my child’s scholarship account?
-
+  examples: |
+    - How much should I be saving for college on top of my child’s scholarship account?
 - intent: faq/18
-  examples: | 
-    -  Does participating in the Save for College Program cost anything?
-
+  examples: |
+    - Does participating in the Save for College Program cost anything?
 - intent: faq/19
-  examples: | 
-    -  How is my child’s and my personal information used?
-
+  examples: |
+    - How is my child’s and my personal information used?
 - intent: faq/20
-  examples: | 
-    -  What is VistaShare, and how is it related to the Save for College Program?
-
+  examples: |
+    - What is VistaShare, and how is it related to the Save for College Program?
 - intent: faq/21
-  examples: | 
-    -  What personal information will VistaShare receive about my child and me?
-
+  examples: |
+    - What personal information will VistaShare receive about my child and me?
 - intent: faq/22
-  examples: | 
-    -  How is my child’s school involved in the Save for College Program?
-
+  examples: |
+    - How is my child’s school involved in the Save for College Program?
 - intent: faq/23
-  examples: | 
-    -  If I choose not to participate in the Save for College Program, can I enroll my child at a later date?
-
+  examples: |
+    - If I choose not to participate in the Save for College Program, can I enroll my child at a later date?
 - intent: faq/24
-  examples: | 
-    -  Can I cancel my child’s participation in the Save for College Program after the Opt Out Notice deadline?
-
+  examples: |
+    - Can I cancel my child’s participation in the Save for College Program after the Opt Out Notice deadline?
 - intent: faq/25
-  examples: | 
-    -  I live in District 30, but my child attends school in a different geographic district Can my child still participate?
-
+  examples: |
+    - I live in District 30, but my child attends school in a different geographic district Can my child still participate?
 - intent: faq/26
-  examples: | 
-    -  My child is enrolled in a District 30 school but has already completed kindergarten Can they still participate?
-
+  examples: |
+    - My child is enrolled in a District 30 school but has already completed kindergarten Can they still participate?
 - intent: faq/27
-  examples: | 
-    -  Why was District 30 in Queens chosen as the first participating school district?
-
+  examples: |
+    - Why was District 30 in Queens chosen as the first participating school district?
 - intent: faq/28
-  examples: | 
-    -  What information does NYC Kids RISE receive about me and my child to enroll my child in the Save for College Program?
-
+  examples: |
+    - What information does NYC Kids RISE receive about me and my child to enroll my child in the Save for College Program?
 - intent: faq/29
-  examples: | 
-    -  Does my family’s income affect my child’s eligibility for scholarship funds?
-
+  examples: |
+    - Does my family’s income affect my child’s eligibility for scholarship funds?
 - intent: faq/30
-  examples: | 
-    -  What happens to my child’s scholarship if we leave District 30 before my child graduates from high school?
-
+  examples: |
+    - What happens to my child’s scholarship if we leave District 30 before my child graduates from high school?
 - intent: faq/31
-  examples: | 
-    -  What happens if my child transfers to another participating school in District 30 before they graduate high school?
-
+  examples: |
+    - What happens if my child transfers to another participating school in District 30 before they graduate high school?
 - intent: faq/32
-  examples: | 
-    -  How can I view the balance of my child’s NYC Scholarship Account?
-
+  examples: |
+    - How can I view the balance of my child’s NYC Scholarship Account?
 - intent: faq/33
-  examples: | 
-    -  What is a “Student ID #” and why do I need it to register on the Savings Tracker?
-
+  examples: |
+    - What is a “Student ID #” and why do I need it to register on the Savings Tracker?
 - intent: faq/34
-  examples: | 
-    -  How will $100 make a difference in a child’s ability to go to college?
-
+  examples: |
+    - How will $100 make a difference in a child’s ability to go to college?
 - intent: faq/35
-  examples: | 
-    -  How can my child earn additional scholarship money?
-
+  examples: |
+    - How can my child earn additional scholarship money?
 - intent: faq/36
-  examples: | 
-    -  Can I save my own money in my child’s NYC Scholarship Account?
-
+  examples: |
+    - Can I save my own money in my child’s NYC Scholarship Account?
 - intent: faq/37
-  examples: | 
-    -  How much will be in my child’s NYC Scholarship Account by the time they graduate high school?
-
+  examples: |
+    - How much will be in my child’s NYC Scholarship Account by the time they graduate high school?
 - intent: faq/38
-  examples: | 
-    -  What is a 529 account?
-
+  examples: |
+    - What is a 529 account?
 - intent: faq/39
-  examples: | 
-    -  Who decides how the scholarship account funds are invested?
-
+  examples: |
+    - Who decides how the scholarship account funds are invested?
 - intent: faq/40
-  examples: | 
-    -  Will this scholarship prohibit my child from receiving other scholarships in the future?
-
+  examples: |
+    - Will this scholarship prohibit my child from receiving other scholarships in the future?
 - intent: faq/41
-  examples: | 
-    -  How does the Save for College Program relate to the Excelsior Scholarship, New York State’s tuition-free degree program?
-
+  examples: |
+    - How does the Save for College Program relate to the Excelsior Scholarship, New York State’s tuition-free degree program?
 - intent: faq/42
-  examples: | 
-    -  How can my child access the money when they go to college?
-
+  examples: |
+    - How can my child access the money when they go to college?
 - intent: faq/43
-  examples: | 
-    -  Is there a deadline for my child to use their scholarship account funds?
-
+  examples: |
+    - Is there a deadline for my child to use their scholarship account funds?
 - intent: faq/44
-  examples: | 
-    -  Can the money in this account be transferred to another child if my child does not use it?
-
+  examples: |
+    - Can the money in this account be transferred to another child if my child does not use it?
 - intent: faq/45
-  examples: | 
-    -  How does having an NYC Scholarship Account affect qualification for public benefits?
-
+  examples: |
+    - How does having an NYC Scholarship Account affect qualification for public benefits?
 - intent: faq/46
-  examples: | 
-    -  How does having an NYC Scholarship Account affect my rent if I live in New York City Housing Authority (NYCHA) housing?
-
+  examples: |
+    - How does having an NYC Scholarship Account affect my rent if I live in New York City Housing Authority (NYCHA) housing?
 - intent: faq/47
-  examples: | 
-    -  How does having an NYC Scholarship Account affect qualification for financial aid?
-
+  examples: |
+    - How does having an NYC Scholarship Account affect qualification for financial aid?
 - intent: faq/48
-  examples: | 
-    -  Can the scholarship funds be used for any special education programs?
-
+  examples: |
+    - Can the scholarship funds be used for any special education programs?
 - intent: faq/49
-  examples: | 
-    -  What is a 529 ABLE account?
-
+  examples: |
+    - What is a 529 ABLE account?
 - intent: faq/50
-  examples: | 
-    -  What are my options for saving through the Save for College Program?
-
+  examples: |
+    - What are my options for saving through the Save for College Program?
 - intent: faq/51
-  examples: | 
-    -  How is a 529 account different from a bank account?
-
+  examples: |
+    - How is a 529 account different from a bank account?
 - intent: faq/52
-  examples: | 
-    -  What if I already have a 529 account set up for my child?
-
+  examples: |
+    - What if I already have a 529 account set up for my child?
 - intent: faq/53
-  examples: | 
-    -  How should I think about college savings if I have other savings priorities or debt?
-
+  examples: |
+    - How should I think about college savings if I have other savings priorities or debt?
 - intent: faq/54
-  examples: | 
-    -  What kinds of financial education opportunities does the Save for College Program offer?
-
+  examples: |
+    - What kinds of financial education opportunities does the Save for College Program offer?
 - intent: faq/55
-  examples: | 
-    -  What happens if a student is not able to use their NY 529  account to pay for qualified expenses?
-
+  examples: |
+    - What happens if a student is not able to use their NY 529  account to pay for qualified expenses?
 - intent: faq/56
-  examples: | 
-    -  How do I open a college savings account?
-
+  examples: |
+    - How do I open a college savings account?
 - intent: faq/57
-  examples: | 
-    -  How do I know which college savings option is best for me?
-
+  examples: |
+    - How do I know which college savings option is best for me?
 - intent: faq/58
-  examples: | 
-    -  Do I need to open my own college savings account to be enrolled in the program?
-
+  examples: |
+    - Do I need to open my own college savings account to be enrolled in the program?
 - intent: faq/59
-  examples: | 
-    -  How does the Savings Match work?
-
+  examples: |
+    - How does the Savings Match work?
 - intent: faq/60
-  examples: | 
-    -  When can I start earning the Savings Match?
-
+  examples: |
+    - When can I start earning the Savings Match?
 - intent: faq/61
-  examples: | 
-    -  How will I know if my child’s account has received the Savings Match?
-
+  examples: |
+    - How will I know if my child’s account has received the Savings Match?
 - intent: faq/62
-  examples: | 
-    -  How much should I start saving regularly into my child’s college savings account?
-
-
-
-
-
+  examples: |
+    - How much should I start saving regularly into my child’s college savings account?
