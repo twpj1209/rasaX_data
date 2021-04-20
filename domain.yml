@@ -1,34 +1,166 @@
-version: "2.0"
-
-intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
-
-responses:
-  utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
-
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
-
+version: '2.0'
+config:
+  store_entities_as_slots: true
 session_config:
   session_expiration_time: 60
   carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- faq:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_faq/1:
+  - text: The NYC Kids RISE Save for College Program is a scholarship and savings program designed to make college and career training more accessible and achievable for all NYC public school students— regardless of their family’s income or immigration status—starting with School District 30 in Queens.
+  utter_faq/2:
+  - text: 'Once your child is enrolled in the program, NYC Kids RISE will create an NYC Scholarship Account and automatically deposit $100 for your child’s educational future. As your child continues their education, NYC Kids RISE will offer opportunities for your family to earn more money toward this account. Other members of the community, including community organizations and businesses, can also add to the scholarship accounts to help your child reach their college and career goals. The scholarship funds are invested in New York’s 529 College Savings Program Direct Plan, a type of account specifically designed to help families save for higher education. Your child’s NYC Scholarship Account can gain or lose money over time, depending on financial markets and the performance of the investment. That means the amount available in a child’s NYC Scholarship Account when that child attends college may be more or less than the amounts originally deposited by NYC Kids RISE into the account. You will receive a Welcome Kit from NYC Kids RISE when your child’s NYC Scholarship Account is opened. For you to access your child’s NYC Scholarship Account and view the funds for the first time and throughout your child’s educational journey:'
+  utter_faq/3:
+  - text: After your child receives their NYC Scholarship Account, you will receive more information on how to create a college savings plan that is right for you and your family. To build on the money invested in your child’s NYC Scholarship Account, you will have an opportunity to open your own college savings account. You own your college savings account. You, your relatives, and your friends can contribute directly to this account. Depending on which option you choose, your family can track your savings balance next to your child’s NYC Scholarship Account through the online NYC Kids RISE Savings Tracker. Throughout the school year, you will have the opportunity to participate in Save for College Program workshops that can help you consider your options. Back to Top
+  utter_faq/4:
+  - text: It can be tough to save for college. For many families, sending their children to college may seem out of reach. NYC Kids RISE, in partnership with the City of New York and the NYC Department of Education, started the Save for College Program to empower families to begin saving and planning for college and career training from their child’s very first days of school. Research shows that children with a college savings account of between $1 and $500 are three times more likely to enroll in college and more than four times more likely to graduate. Research also shows that children who attend college earn a significantly higher salary over their lifetimes and are less likely to be unemployed.
+  utter_faq/5:
+  - text: Every kindergarten, first-grade, second-grade, and third-grade family in District 30 can participate in the Save for College Program regardless of the child’s or their family’s immigration status. Families do not need to provide a Social Security Number (SSN) or Individual Taxpayer Identification Number (ITIN) for the child to be enrolled in the program and receive an NYC Scholarship Account. When considering whether to open your own college savings account, please note that this is separate from the child’s NYC Scholarship Account. Both types of college savings accounts currently available through the program require an SSN or ITIN to open. In addition, if you choose to open your own college savings account in the NY 529 Direct Plan, you must meet the IRS definition of U.S. citizen or resident alien with a verified U.S. address. You do not have to open your own account to receive and keep the free NYC Scholarship Account. If you do not have this information, remember that a family member or trusted friend can open an account for your child. Contact NYC Kids RISE or participate in an event to learn more. Our multilingual staff are here to help you find the information you need to make a plan that makes sense for you and your family.
+  utter_faq/6:
+  - text: Money in the NYC Scholarship Account is invested in the NY 529 Direct Plan and can be used only for higher education. This includes two-year and four-year colleges and other career training programs The scholarship funds can be used for tuition, fees, equipment, some room-and-board expenses, and even things like textbooks, which are often not covered by other scholarships. The funds can be used at academic and vocational programs in New York and across the country, as well as at some schools in other countries. Visit nysaves.org for a full list of qualifying higher education expenses. Money in the NYC Scholarship Account cannot be used for any K-12 expenses, including those that qualify under federal law.
+  utter_faq/7:
+  - text: A student can only access the money in their NYC Scholarship Account if the student attends a qualifying institution, which includes most two- and four-year colleges, as well as specialized training and certification programs. If the student does not claim these funds within 20 years after they complete kindergarten, then those funds will go back to NYC Kids RISE to support future Save for College Program students. Families can keep any money they deposit into their own college savings account, regardless of whether their student attends a qualifying institution. Depending on the type of college savings account option the family chooses, they may have to pay a tax or penalty to use the money for other expenses besides qualified educational expenses. For more information, visit nyckidsrise.org/options.
+  utter_faq/8:
+  - text: NYC Kids RISE manages the Save for College Program in partnership with the NYC Department of Education and the City of New York. NYC Kids RISE is a nonprofit organization working to expand economic opportunity and equity by providing families, schools, and communities with a way to work together to save for their children’s education. Building on the dreams and expectations that families have for their children’s futures, NYC Kids RISE aims to make attending and graduating from college and career training more achievable for all NYC public school students— regardless of where they come from or how much their families have in the bank. To learn more about us call 833-543-7473, or email info@nyckidsrise.org.
+  utter_faq/9:
+  - text: Visit nyckidsrise.org, call 833-543-7473, or email info@nyckidsrise.org. You can also follow @nyckidsrise on Instagram and Twitter, “Like” NYC Kids RISE on Facebook, and subscribe to NYC Kids RISE on YouTube.
+  utter_faq/10:
+  - text: Every student in kindergarten through third grade who attends a participating school. First-, second-, and third-graders who transfer into a participating school are also eligible to enroll in the program. Eligible students must attend a participating school for at least 60 days to be enrolled.
+  utter_faq/11:
+  - text: All public elementary schools in District 30 in Queens are participating in the program. Visit nyckidsrise.org/schools for a full list.
+  utter_faq/12:
+  - text: It’s easy to get started with the Save for College Program and begin to invest in your child’s future. Here’s how:If your child is a K-3 student in one of the 39 participating schools, you’re eligible!
+  utter_faq/13:
+  - text: To tell your school that you do not want your child to be enrolled in the Save for College Program, you must sign the Opt Out form within 30 days of receiving it. Signing this form means your child will not receive an NYC Scholarship Account, the $100 deposit, or future funds. Please refer to your child’s Opt Out form for specific details.
+  utter_faq/14:
+  - text: 'After the opt out deadline, the Department of Education will send NYC Kids RISE the names and basic information of every student whose parents/guardians did not opt out. This information will include the following: child’s name, birthday, school, grade, home address, home phone number, and home language; and parent/guardian names and contact information (if this was provided to the DOE). This data will allow NYC Kids RISE to open an NYC Scholarship Account for every participating child and deposit $100 into each one. See DOE’s InfoHub page for the full list of data elements.'
+  utter_faq/15:
+  - text: Every kindergartner enrolled in a participating school is automatically enrolled in the Save for College Program, unless their family chooses not to participate. First graders who did not attend a participating school in kindergarten are also eligible to enroll in the program this year. If you received a Save for College Program Welcome Kit or Congratulations Postcard, your child has been enrolled in the program. If you believe that your child was enrolled in error, please contact NYC Kids RISE at 833-543-7473 or info@nyckidsrise.org.
+  utter_faq/16:
+  - text: Taking the first step to save for college and career training can be the hardest part. With the Save for College Program, we’ve already taken the first step together. Starting today, you can take three more steps before the end of the school year. Think of these as the “3 Building Blocks” of our partnership for your child’s educational future:These are just the first steps in a long-term partnership with NYC Kids RISE, your child’s school, and your community to save money together for your child’s future. Click View My Account to get started.
+  utter_faq/17:
+  - text: Every family’s situation is different. College savings are one important piece of a family’s overall financial health. Deciding how much to save for college or career training depends on your individual financial circumstances, including your income, assets, debt, regular expenses, public benefits, and credit. NYC Kids RISE encourages every family to start contributing at whatever amount makes sense for them. Getting started while your child is young can make a big difference, regardless of the amount. For free, one-on-one support with fitting savings into your overall financial picture, consider visiting one of the NYC Financial Empowerment Centers located throughout the city. At the Financial Empowerment Centers, you can meet one-on-one with a professional financial counselor who can help you tackle debt, improve your credit, create a budget, open a bank account, save and plan for your future, and more. You can also get information about saving for your child’s college education and making a plan to start saving. To schedule an appointment at a Financial Empowerment Center near you, call 311 or visit nyc.gov/dca
+  utter_faq/18:
+  - text: No, enrollment in the NYC Kids RISE Save for College Program is automatic and free of charge. Visit nyckidsrise.org/options or attend a Save for College Program event to learn about low- and no-cost college savings options in addition to your child’s NYC Scholarship Account.
+  utter_faq/19:
+  - text: This basic information about participating families is used to set up the student’s NYC Scholarship Account, contact families about the Save for College Program, and evaluate the success of the program. After your child has been enrolled in the program, you can update the contact information provided to NYC Kids RISE and unsubscribe from certain kinds of communication by visiting the online Savings Tracker website. To access your Savings Tracker, click here.
+  utter_faq/20:
+  - text: VistaShare is a technology company contracted by NYC Kids RISE that provides software to securely store the personal information about children and parents/guardians and to create their NYC Scholarship Accounts. The VistaShare software, called the Savings Tracker, also allows parents/guardians and family members of participating children to view their scholarship account and link their own college savings account, if they choose to do so.
+  utter_faq/21:
+  - text: VistaShare will have access to the software that stores participant information so that it can provide technical support. The software stores the basic information about families provided by the Department of Education, the value of the scholarship funds allotted to each participant, and the deposits made into and value of the account that a family has linked to their scholarship account.
+  utter_faq/22:
+  - text: NYC Kids RISE works with the NYC Department of Education and the participating schools to share information about the Save for College Program, support families to participate, and coordinate financial education opportunities for both students and parents/guardians.
+  utter_faq/23:
+  - text: Yes, parents/guardians who opted out but later change their mind and wish to participate should contact NYC Kids RISE at 833-KID-RISE (833-543-7473). These parents/guardians must contact NYC Kids RISE and submit a Re-Enrollment Form before the end of their child’s fifth grade year to qualify for enrollment.
+  utter_faq/24:
+  - text: Yes, if you wish to cancel your child’s participation after being enrolled in the Save for College Program, please contact NYC Kids RISE at 833-KID-RISE (833-543-7473). You will be asked to submit a Cancellation Form.
+  utter_faq/25:
+  - text: No, at this time, only students enrolled in a participating school are eligible to participate. Visit nyckidsrise.org/schools for the full list of participating schools.
+  utter_faq/26:
+  - text: Possibly. The Save for College Program is designed to begin when a child is in kindergarten. However, students who enroll in a participating school in first through fifth grade can be automatically enrolled in the program if the other students in their grade were enrolled in kindergarten. For the 2018-2019 school year, this means all kindergartners and all first graders in participating schools are eligible to participate in the program.
+  utter_faq/27:
+  - text: School District 30 was selected as the first participating school district for the Save for College Program because it has strong school- and community-based partners to support and spread the word about the program’s growth and success. This District’s diverse population also reflects New York City’s public-school population as a whole. Back to Top
+  utter_faq/28:
+  - text: NYC Kids RISE receives the following pieces of information from the NYC Department of Education for every participating student:NYC Kids RISE also receives the following information for up to two parents/guardians per participating student:This is similar information to what you submit on the “blue card” when you enroll your child in school. This data allows NYC Kids RISE to set up an NYC Scholarship Account for every participating child and make an initial deposit of $100 into each one.
+  utter_faq/29:
+  - text: No, every kindergartner and first grader in a District 30 school is eligible for an NYC Scholarship Account, the $100 initial deposit from NYC Kids RISE, and additional rewards and deposits.
+  utter_faq/30:
+  - text: Once your child has received an NYC Scholarship Account, they continue to have access to that account if they move to any other public district or charter school in New York City. Your child will also continue to be eligible for certain additional rewards. If your child leaves the NYC public school system, your child will still be able to use the funds already in their NYC Scholarship Account, but will not be eligible to earn any additional rewards.
+  utter_faq/31:
+  - text: A student who transfers to any other participating school within District 30, including participating charter schools, will remain in the Save for College Program and be eligible for all the benefits that come with participating.
+  utter_faq/32:
+  - text: You can view your child’s NYC Scholarship Account online on the NYC Kids RISE Savings Tracker. To access the Savings Tracker, click here. Follow the step by-step instructions to create a profile, complete a survey, and view the scholarship account balance.
+  utter_faq/33:
+  - text: 'The Student ID # is an identification number provided by the NYC Department of Education to every student in NYC public schools. The Savings Tracker asks for your child’s Student ID # to confirm your identity and protect the privacy of your child’s information. You can find your child’s Student ID # on your child’s report card, by logging onto your NYC Schools Account at https://mystudent.nyc, or by asking your child’s school. Note that NYC Kids RISE will never be able to see or access this Student ID #.'
+  utter_faq/34:
+  - text: Children who have a college savings account and a plan for higher education are more likely to attend and graduate from college. Research shows that children with a college savings account of just $1 to $500 are three times more likely to enroll in college and more than four times more likely to graduate with a degree. The hope is that participating students’ NYC Scholarship Accounts will grow over time through additional rewards and Community Scholarships (subject to potential investment gains or losses), making college more accessible for every child.
+  utter_faq/35:
+  - text: NYC Kids RISE will provide opportunities for families to earn additional deposits, or rewards, toward their NYC Scholarship Account. The first three rewards are for completing what we call the “3 Building Blocks”. These three steps lay the foundation for our long-term partnership to save together for your child’s future:NYC Kids RISE will deposit $25 into your child’s scholarship account for each of these Building Blocks, if you complete them by the end of the semester after your child is enrolled in the Save for College Program. After that deadline, the reward amount decreases. NYC Kids RISE will also offer other reward opportunities for your child’s account through third grade. Visit nyckidsrise.org or call 833-543-7473 for the latest reward deadlines and announcements.
+  utter_faq/36:
+  - text: No, families cannot make deposits into individual NYC Scholarship Accounts. NYC Kids RISE encourages families to consider opening their own college savings account and starting to make contributions to that account. Community members, including organizations and businesses, can contribute to the scholarship accounts of a group of students by donating to NYC Kids RISE.
+  utter_faq/37:
+  - text: The NYC Scholarship Account is invested in the NY 529 Direct Plan. Funds in the NY 529 Direct Plan are invested in financial markets with compound earnings, so the scholarship account can grow over time. For example, if your child had $300 in their scholarship account (the $100 initial contribution plus $200 in potential rewards), their account would be estimated to grow to approximately $500 by the time the student graduated high school. This is based on a hypothetical return rate of approximately 4.5% per year, over 13 years. However, because money in the scholarship account is invested, the scholarship account could also lose money at times, depending on the performance of the investment. That means that the amount available for your child from the NYC Scholarship Account when your child attends college may be more or less than the amounts originally deposited by NYC Kids RISE into the account.
+  utter_faq/38:
+  - text: A 529 account is a type of account specifically designed to help families save for college. Money in a 529 account can grow over time and comes with tax benefits, including tax-free earnings and potential state income tax deductions. However, money in a 529 account is not guaranteed to grow and can also lose value. The NY 529 Direct Plan is a 529 college savings plan administered by the Office of the Comptroller of the State of New York and the New York Higher Education Services Corporation. Most other states also offer their own versions of 529 accounts that can help you achieve your savings goals. However, these other 529 accounts cannot be connected to your child’s scholarship account.
+  utter_faq/39:
+  - text: NYC Kids RISE owns and manages the NYC Scholarship Accounts and determines how the funds are invested. NYC Kids RISE has chosen to invest the scholarship accounts in the NY 529 Direct Plan. Within that plan, NYC Kids RISE has chosen to invest the scholarship funds in the “Moderate Age-Based Option.” For more information about the NY 529 Direct Plan and its investment options, visit nysaves.org or call 877-NYSAVES.
+  utter_faq/40:
+  - text: Having an NYC Scholarship Account should not prohibit your child from receiving other scholarships in the future, though that may depend on the terms of those other scholarships. Please review the terms of those scholarships and contact NYC Kids RISE at 833-543- 7473 with questions.
+  utter_faq/41:
+  - text: Money contributed by NYC Kids RISE and by community supporters into the NYC Scholarship Accounts can be used for more than just tuition. If a student qualifies for free tuition at a CUNY or SUNY college through the Excelsior Scholarship, they can use funds from their NYC Scholarship Account toward the many other costs of college. This includes books, supplies, computers, and some room-and-board fees. Also, the NYC Scholarship Account can be used at most two- and four-year colleges and career training programs around the country, as well as at some in other countries.
+  utter_faq/42:
+  - text: NYC Kids RISE will provide students and their parents/guardians with information about how to access their NYC Scholarship Accounts when the students are in high school. NYC Kids RISE is committed to making these funds available when your participating child attends college, regardless of the program’s future expansion.
+  utter_faq/43:
+  - text: The deadline for using the money in your child’s NYC Scholarship Account is 20 years after the school year in which your student began kindergarten. For example, students who began kindergarten in September 2017 will be able to apply for and use their scholarship funds for qualified college or career training expenses until June 30, 2038. If there are any unclaimed funds left after that deadline, those funds will go back to NYC Kids RISE to support the Save for College Program in future years.
+  utter_faq/44:
+  - text: No, the NYC Scholarship Account is set aside specifically for your child’s education after high school. Money in the scholarship account cannot be transferred to another child.
+  utter_faq/45:
+  - text: Because the NYC Scholarship Accounts are owned and managed by NYC Kids RISE, having a scholarship account does not impact a student’s or family’s application for public benefits. If a family saves money in their own college savings account, this asset may impact certain benefits. For more information on how contributing to your own college savings account may impact your benefits, visit nyckidsrise.org/public-benefits.
+  utter_faq/46:
+  - text: Because the NYC Scholarship Accounts are owned and managed by NYC Kids RISE, having a scholarship account does not impact a student’s or family’s application or rent for NYCHA housing or for housing support through the NYC Department of Housing Preservation and Development. If a family saves money in their own college savings account, this asset may be considered in the application process. For more information on how a savings account may impact your NYCHA rent, visit nyckidsrise.org/public-benefits.
+  utter_faq/47:
+  - text: 'Because the NYC Scholarship Accounts are owned and managed by NYC Kids RISE, having a scholarship account does not impact a student’s eligibility for financial aid while the money is in the account. NYC Kids RISE will provide more information as your child gets closer to college about how using the scholarship account money for your child’s education could impact their eligibility for financial aid once the money is spent. There may or may not be an impact. If a family saves money in their own college savings account, these savings may impact the student’s financial aid package. For more information on how contributing to your own college savings account could impact your student’s eligibility for financial aid under current financial aid rules, visit nyckidsrise.org/financial-aid. Please note that these financial aid rules often change over time. '
+  utter_faq/48:
+  - text: The NYC Scholarship Accounts, in line with NY 529 Direct Plan rules, can be used to cover certain services for students with special needs in connection with enrollment and attendance at eligible educational institutions. Some eligible educational institutions have programs and supports in place for students with special needs. To check if a particular school or program is eligible, visit https://ifap.ed.gov/ifap/fedSchoolCodeList.jsp. To learn more about the types of eligible expenses under the NY 529 Direct Plan, including for students with special needs, contact NY 529 at 877-NYSAVES (877-697-2837) or visit nysaves.org.In addition, NYC Kids RISE is exploring ways for funds in a child’s NYC Scholarship Account to be transferred to an ABLE account. ABLE (Achieving a Better Life Experience) accounts are tax advantaged savings vehicles that allow individuals with disabilities to save for disability-related expenses. NYC Kids RISE will provide more information in the future about this possibility. For more information about New York’s ABLE Plan, see “What is a 529 ABLE account?” below.
+  utter_faq/49:
+  - text: ABLE (Achieving a Better Life Experience) accounts are tax advantaged savings vehicles that allow individuals with disabilities to save for disability-related expenses. For more information about ABLE accounts, visit mynyable.org and https://www.ablenrc.org/what-is-able/what-are-able-acounts/.
+  utter_faq/50:
+  - text: There are many ways to save for college. The Save for College Program provides two college savings account options that you can open and connect to your child’s NYC Scholarship Account:There are other ways to save besides these two college savings account options. You may wish to explore those other alternatives to see if they might be better suited for your particular needs or circumstances. However, the specific features and benefits provided by the Save for College Program for college savings accounts are available only for these two options. NYC Kids RISE does not provide investment advice or recommend any particular kind of college savings account. For more information about these options and how to open an account, visit nyckidsrise.org/options, contact NYC Kids RISE, or attend an upcoming Save for College Program workshop.
+  utter_faq/51:
+  - text: 'Bank accounts and 529 accounts are both options for saving money for college. However, 529 accounts are invested in financial markets, which come with both greater potential risks and greater potential rewards. A savings account at a bank like Amalgamated Bank, on the other hand, is insured by the Federal Deposit Insurance Corporation up to $250,000.1 Contributing to a 529 account, including the NY 529 Direct Plan, also comes with certain tax benefits that do not come with most bank accounts. 529 accounts are specifically designed for families saving for a child’s education after high school. If a withdrawal from the 529 account is used for anything other than qualified educational expenses, the earnings portion of the withdrawal may be taxed as ordinary income and families may incur a 10 percent tax penalty on the earnings. The withdrawal may also be subject to state and local taxes.1: The standard deposit insurance coverage limit is $250,000 per depositor, per FDIC-insured bank, per ownership category. Deposits held in different ownership categories are separately insured, up to at least $250,000, even if held at the same bank.'
+  utter_faq/52:
+  - text: If you already have a 529 account in the NY 529 Direct Plan with your child as the beneficiary, you will have the opportunity to connect that existing account to the child’s NYC Scholarship Account and view the balance of both accounts in one place. For more information on how to connect the accounts, visit nyckidsrise.org/options. If you already have a 529 account in another state’s 529 plan, you may continue to use that account, but it will not qualify for the specific features and benefits provided by the Save for College Program. The NYC Kids RISE Save for College Program does not provide investment advice, and a recommendation about the suitability of any investment is not being made in this document.
+  utter_faq/53:
+  - text: Everyone’s financial situation is different. For one-on-one help, consider seeking the advice of an investment professional, or visit an NYC Financial Empowerment Center for free financial counseling. At the City’s Financial Empowerment Centers, you can meet one-on-one with a professional financial counselor who can help you make a budget and save and plan for the future, including higher education. Counselors can also help you tackle debt, improve your credit, open a bank account, and more. To schedule an appointment at a Center near you, call 311 or visit nyc.gov/dca
+  utter_faq/54:
+  - text: NYC Kids RISE provides tools and information for families to develop their own college savings plans. This includes workshops and events at your child’s school where you can learn more about college savings options and financial empowerment resources available to you. A calendar of upcoming Save for College Program events can be found at nyckidsrise.org/events. Make sure to keep your contact information updated on the Savings Tracker to receive regular communication about upcoming events, resources, and opportunities. NYC Kids RISE has collaborated with the NYC Department of Education to develop exciting and interactive financial education curricula for kindergarten, first-grade, and second-grade students. These curricula were created by the NYC Department of Education’s Teaching and Learning division of the Queens North Field Support Center, with some lessons adapted from the FDIC’s Money Smart for Young People program. These standard-aligned, crossfunctional lessons help students build the foundational skills needed to become financially responsible adults.
+  utter_faq/55:
+  - text: Withdrawals from 529 plan accounts that are not used for qualified expenses are subject to federal, and applicable state and local tax on the earnings, as well as a 10% federal penalty. However, withdrawals due to a disability are subject to federal and applicable state and local tax on the earnings but not the 10% federal penalty. In addition, recent changes in federal tax laws allow money in a student’s 529 account to be transferred to an ABLE account under certain circumstances before January 1, 2026 without any federal or state tax or penalty. For more information about ABLE accounts, see question 49.
+  utter_faq/56:
+  - text: Visit nyckidsrise.org/options or attend a Save for College Program event for step-by-step instructions and support.
+  utter_faq/57:
+  - text: There are many ways to save for college. Visit nyckidsrise.org/options or attend a Save for College Program workshop for tools and information to compare your college savings options. For detailed information about the NY 529 Direct Plan, visit nysaves.org or call 877-NYSAVES (877-697-2834). To learn more about Amalgamated Save for College Bank Accounts, visit an Amalgamated Bank branch near you or call 800-662-0860. Most other states also offer their own versions of 529 accounts, and other banks are available for your savings purposes. All of these can help you achieve your college savings goals. However, those other options are not connected to the Save for College Program. NYC Kids RISE encourages every family to explore various college savings options and does not provide investment advice. You should consider your own circumstances before saving or investing, and you may wish to seek the advice of an investment professional.
+  utter_faq/58:
+  - text: No, you do not need to open your own college savings account or deposit any money for your child to be enrolled in the Save for College Program and have an NYC Scholarship Account. However, NYC Kids RISE encourages every family to explore their options and open their own college savings account. For support, contact NYC Kids RISE or attend a Save for College Program event.
+  utter_faq/59:
+  - text: 'For every dollar your family deposits into your connected college savings account up to the next $100, NYC Kids RISE will deposit a dollar into your child’s NYC Scholarship Account.As long as you have connected a college savings account to your child’s NYC Scholarship Account (Building Block #2), NYC Kids RISE can track your family’s deposits and automatically match them.'
+  utter_faq/60:
+  - text: This Savings Match opportunity starts when your participating child is in first grade and ends on the last day of third grade. This year, the Savings Match opportunity started on October 9, 2018, for all participating first grade families.You must complete the 3 Building Blocks to be eligible for the Savings Match.
+  utter_faq/61:
+  - text: To see the deposits NYC Kids RISE has made into your child’s NYC Scholarship Account, log back into your Savings Tracker here and scroll down to the section called “Your College Savings Accounts.”In addition, NYC Kids RISE will send a monthly email with information about your family’s progress toward claiming the full Savings Match and reaching your savings goals. This monthly email will go to every adult who has registered on the Savings Tracker to view your child’s NYC Scholarship Account.
+  utter_faq/62:
+  - text: Every family’s situation is different. College savings are one important piece of a family’s overall financial health. Deciding how much to save for college or career training depends on your individual financial circumstances, including your income, assets, debt, regular expenses, public benefits, and credit. NYC Kids RISE encourages every family to start contributing at whatever amount makes sense for them. Getting started while your child is young can make a big difference, regardless of the amount.For free, one-on-one support with fitting savings into your overall financial picture, consider visiting one of the NYC Financial Empowerment Centers located throughout the city. At the Financial Empowerment Centers, you can meet one-on-one with a professional financial counselor who can help you tackle debt, improve your credit, create a budget, open a bank account, save and plan for your future, and more. You can also get information about saving for your child’s college education and making a plan to start saving.To schedule an appointment at a Financial Empowerment Center near you, call 311 or visit www.nyc.gov/dca.
+actions: []
+forms: {}
+e2e_actions: []
